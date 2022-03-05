@@ -1,4 +1,3 @@
-
 @doctor_create_appointment
 
   Feature: appointment feature
