@@ -12,5 +12,6 @@ public class EkremTest {
         System.out.println("Iki sayiyi carp: " + (say1*say2*say1));
         System.out.println("Iki sayiyi carp: " + (say1*say2*say2));
         System.out.println("Iki sayiyi carp: " + (say1*say2*say1*say2));
+        System.out.println("Iki sayiyi carp: " + (say1*say2*say1*say2*say1));
     }
 }
