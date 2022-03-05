@@ -8,9 +8,7 @@ public class EkremTest {
         int say1 = 3;
         int say2 = 5;
         System.out.println("Iki sayiyi topla: " + (say1+say2));
-
         System.out.println("Iki sayiyi carp: " + (say1*say2));
-
         System.out.println("Iki sayiyi carp: " + (say1*say2*say1));
     }
 }
