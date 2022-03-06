@@ -194,27 +194,32 @@ public class Driver {
     }
 
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                //Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public static WebElement waitForVisibility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                //Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static Boolean waitForInVisibility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                //Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 
     public static WebElement waitForClickablility(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                //Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static WebElement waitForClickablility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                //Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
@@ -225,7 +230,8 @@ public class Driver {
             }
         };
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(),5);
+                    //Duration.ofSeconds(timeout));
             wait.until(expectation);
         } catch (Exception error) {
             error.printStackTrace();
