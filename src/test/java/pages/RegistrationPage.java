@@ -22,13 +22,22 @@ public class RegistrationPage {
     public WebElement usernameTextBox;
     @FindBy(id = "email")
     public WebElement emailTextbox;
-    @FindBy(id = "firstPassword")
+    @FindBy(xpath = "//*[text()='New password']/following::input")
     public WebElement firstPasswordTextBox;
-    @FindBy(id = "secondPassword")
+    @FindBy(id= "secondPassword")
     public WebElement newPasswordTextBox;
     @FindBy(id = "register-submit")
     public WebElement registerButton;
     @FindBy(xpath = "//*[contains(text(),'Registration Saved')]")
     public WebElement successMessageToastContainer;
+
+    @FindBy(xpath = "//*[@id='strengthBar']/li[contains(@style,'rgb(255, 0, 0)')]")
+    public WebElement passwordStrength1;
+
+    @FindBy(xpath = "//*[@id='strengthBar']/li[contains(@style,'rgb(255, 153, 0)')]")
+    public WebElement passwordStrength2;
+
+    @FindBy(xpath = "//*[@id='strengthBar']/li[contains(@style,'rgb(153, 255, 0)')]")
+    public WebElement passwordStrength3;
 
 }

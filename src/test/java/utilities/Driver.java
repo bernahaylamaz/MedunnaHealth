@@ -112,6 +112,8 @@ public class Driver {
         }
     }
 
+
+
     public static void waitAndSendTextWithDefaultTime(WebElement element, String text) {
         for (int i = 0; i < timeout; i++) {
             try {
