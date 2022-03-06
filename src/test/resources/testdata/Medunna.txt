@@ -1,0 +1,1 @@
+Registrant{ssn='525-35-8251', firstname='Kurt', lastname='Powlowski', username='KurtPowlowski', email='myrtis.wiza@hotmail.com', password='p3WwAHMoB9Es9VQ'}
