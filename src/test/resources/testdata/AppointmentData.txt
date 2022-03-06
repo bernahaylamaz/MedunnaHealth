@@ -1,0 +1,1 @@
+Appointment{firstname='Shawn', lastname='Waelchi', ssn='466-18-6616', email='rigoberto.hackett@gmail.com', phoneNumber='637.608.9699', date='06-07-2022'}
