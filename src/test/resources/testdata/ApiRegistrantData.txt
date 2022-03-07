@@ -1,0 +1,16 @@
+Registrant{firstName='Jacinto', lastName='Russel', ssn='773-90-5623', login='JacintoRussel', langKey='null', password='@3OsLvlw459pON', email='treena.rau@gmail.com'}
+Registrant{firstName='Yessenia', lastName='Bechtelar', ssn='746-55-0754', login='YesseniaBechtelar', langKey='null', password='eBU#kq2DFH', email='rufus.boehm@hotmail.com'}
+Registrant{firstName='Magaret', lastName='Oberbrunner', ssn='471-42-4246', login='MagaretOberbrunner', langKey='null', password='60!ApHTV@gdxN', email='eartha.ward@gmail.com'}
+Registrant{firstName='Ladawn', lastName='Schaden', ssn='819-39-9413', login='LadawnSchaden', langKey='null', password='S594j35Q9UTbFoAW$52', email='pansy.hilpert@gmail.com'}
+Registrant{firstName='Donita', lastName='Bode', ssn='079-03-4356', login='DonitaBode', langKey='null', password='5@K10s8J%tg', email='shyla.bartell@hotmail.com'}
+Registrant{firstName='Shari', lastName='Koelpin', ssn='476-49-6551', login='ShariKoelpin', langKey='null', password='lA431VhEM', email='gwenn.smith@hotmail.com'}
+Registrant{firstName='Nathaniel', lastName='Morar', ssn='424-44-5573', login='NathanielMorar', langKey='null', password='eS%VaVatPa2Oo!E^FIo', email='chong.mcglynn@gmail.com'}
+Registrant{firstName='Domingo', lastName='Berge', ssn='066-32-4426', login='DomingoBerge', langKey='null', password='MW%w&Qa1yhyZU6&l2', email='bambi.leuschke@gmail.com'}
+Registrant{firstName='Dewey', lastName='Hammes', ssn='790-55-7760', login='DeweyHammes', langKey='null', password='@Q$3EFAT', email='laura.simonis@yahoo.com'}
+Registrant{firstName='Alex', lastName='Kerluke', ssn='365-74-9611', login='AlexKerluke', langKey='null', password='3v!x**y42Sefm', email='han.heidenreich@gmail.com'}
+Registrant{firstName='Carmelo', lastName='Grady', ssn='128-97-7463', login='CarmeloGrady', langKey='null', password='G7aEEYMQHxU', email='loriann.bode@hotmail.com'}
+Registrant{firstName='Chantel', lastName='Hoeger', ssn='247-56-4952', login='ChantelHoeger', langKey='null', password='0H^o#KxmYQ7x7cX', email='mila.davis@gmail.com'}
+Registrant{firstName='Tajuana', lastName='Schneider', ssn='124-09-1112', login='TajuanaSchneider', langKey='null', password='2r85s7p!Hm@n6', email='katheleen.schmidt@yahoo.com'}
+Registrant{firstName='Leena', lastName='Will', ssn='551-76-5594', login='LeenaWill', langKey='null', password='qO8k&Hbx3Io#7', email='an.daugherty@gmail.com'}
+Registrant{firstName='Carroll', lastName='Stark', ssn='429-51-2575', login='CarrollStark', langKey='null', password='by@gpjhpE*TwbMv', email='kimberely.muller@yahoo.com'}
+Registrant{firstName='Lakenya', lastName='Sawayn', ssn='635-31-4888', login='LakenyaSawayn', langKey='null', password='X*ZWLl^X', email='celena.goldner@yahoo.com'}
