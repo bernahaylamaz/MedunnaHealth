@@ -36,11 +36,11 @@ public class Hooks {
 
     }
 
-    @Before(order = 1, value = "@Appointment")
+    @Before(order = 1, value = "@UIMyApp")
     public void navigateToLandingPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
-
+        //Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
     }
 
 
