@@ -23,4 +23,12 @@ public class PhysicianPage {
 
     @FindBy(id="toDate")
     public WebElement toDate;
+
+
+    @FindBy(xpath = "/html/body/div/div/div/div[4]/div/div/div/div/div/table/tbody/tr/td[2]/span")
+    public WebElement appDateTime;
+
+
+//    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/table")
+//    public WebElement appTable;
 }
