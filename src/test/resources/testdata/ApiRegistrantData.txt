@@ -7,3 +7,4 @@ Registrant{firstName='Arica', lastName='Bruen', ssn='507-53-1414', login='anibal
 Registrant{firstName='Judson', lastName='Becker', ssn='454-85-8968', login='krysten.goyette', langKey='en', password='M0J*TZVbt&20^&', email='antoine.frami@gmail.com'}
 Registrant{firstName='Perry', lastName='Reinger', ssn='231-14-2158', login='jimmie.lehner', langKey='en', password='nOv%W#83FRq', email='philomena.strosin@gmail.com'}
 Registrant{firstName='Ross', lastName='Medhurst', ssn='093-04-8496', login='clorinda.nitzsche', langKey='en', password='6@gj9W4F1R^G^', email='rod.dach@yahoo.com'}
+Registrant{firstName='Jamaal', lastName='Nader', ssn='313-82-8809', login='mikaela.fadel', langKey='en', password='K4k1OW4%kuwO7', email='marcos.lynch@hotmail.com'}
