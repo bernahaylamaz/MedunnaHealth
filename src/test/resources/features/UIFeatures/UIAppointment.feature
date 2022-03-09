@@ -6,7 +6,7 @@ Feature: appointments test
   @Appointment
   Scenario Outline: test appointments
     Given user clicks on make an appointment
-    And user provides the appointment name "<firstname>"
+    And user provides the appoinment name "<firstname>"
     And user provides the appointment lastname "<lastname>"
     And user provides ssn and email "<SSN>" and "<email>"
     When user provides the phone number "<phoneNumber>"
