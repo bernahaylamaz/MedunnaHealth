@@ -1,18 +1,45 @@
-@UI
-Feature: registration data test
+
+Feature: test all registrant data
+
+
+  @SmokeTest
+    @UIRegistration
+  Scenario Outline: test registration
+    Given user provides ssn id "<SSN>"
+    And  user provides firstname and lastname "<firstname>" and "<lastname>"
+    Then user creates username "<username>"
+    And user provides also email "<email>"
+    And user generates the password "<password>"
+    And user registers and validates
+    Then user creates the records to a correspondent file
+    Examples: test data
+      |SSN|firstname|lastname|username|email|password|
+      |384-37-3827|Irfan|Pishkin|irfanpish|irfan@gmail.com|asdfA123.|
+
 
   @UIRegistration
-Scenario Outline:  test registrations
+  Scenario Outline: test password strength
+    Given user provides the password "<password>"
+    Then user valides the password strength "<strength>"
+    Examples: test data
+      |password|strength|
+      |asdfgkdjs|1      |
+      |asdfgkdjs?|2    |
+      |asdhgsag?1|3    |
 
-  Given user provides ssn "<SSN>"
-  And user sends firstname and lastname "<firstname>" and "<lastname>"
-  And user provides username "<username>"
-  Then user provides email as "<email>"
-  And user provides password "<password>"
-  And user registers and validates data generation
-  Then user sets the data in correspondent files
 
-  Examples: test data
-  |SSN|firstname|lastname|username|email|password|
-  | 381-59-2857  |Elanur         |    Selcuk    |   elanurselcuk     |  elanur@gmail.com   |    Asdfg1234.    |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -12,16 +12,9 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         features = "./src/test/resources/features",
-        glue = {"stepdefinitions", "Hooks/Hooks"},
-        tags = "@UIMyApp",
+        glue = {"stepdefinitions","Hooks"},
+        tags = "@ApiRegistrant",
         dryRun = false
 )
 public class Runner {
 }
-
-//        git init
-//        git add README.md
-//        git commit -m "first commit"
-//        git branch -M main
-//        git remote add origin https://github.com/Bbican/HelthProject.git
-//        git push -u origin main
