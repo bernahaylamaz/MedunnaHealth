@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import static utilities.DateUtils.getDate;
+import static utilities.ReusableMethods.waitForVisibility;
 
 public class Physician_MyAppointments {
 
@@ -61,5 +62,21 @@ public class Physician_MyAppointments {
         Assert.assertTrue(physicianPage.appointmentText.isDisplayed());
 
     }
+    @Then("Verify that user\\(doctor) can see patient id, start date, end date, status")
+    public void verify_that_user_doctor_can_see_patient_id_start_date_end_date_status() {
+        waitForVisibility(physicianPage.IDText,5);
+        String dummy =physicianPage.IDText.getText();
+        System.out.println(dummy);
+
+        Assert.assertEquals("ID",physicianPage.IDText.getText());
+        Assert.assertEquals("Start DateTime",physicianPage.startDateTime.getText());
+        Assert.assertEquals("End DateTime",physicianPage.endDateTime.getText());
+        Assert.assertEquals("Status",physicianPage.status.getText());
+
+
+
+    }
+
+
 
 }

@@ -10,6 +10,14 @@ Feature: Physician My Appointments
       |username|password|
       |doctor1 |Ab12345.|
 
+  Scenario Outline:  user(doctor) can see patient id, start date, end date, status
+    Given Go to Medunna web site
+    And Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+    And Click on My Pages tab and choose My Appointments
+    Then Verify that user(doctor) can see patient id, start date, end date, status
+    Examples:
+      |username|password|
+      |doctor1 |Ab12345.|
 
 
 
