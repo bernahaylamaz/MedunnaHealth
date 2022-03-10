@@ -26,6 +26,7 @@ public class Physician_MyAppointments {
 
     @Given("Go to Medunna web site")
     public void go_to_medunna_web_site() {
+
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
     }

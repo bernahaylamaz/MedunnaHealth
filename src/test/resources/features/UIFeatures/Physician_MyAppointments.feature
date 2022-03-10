@@ -1,6 +1,7 @@
 @UIMyApp
 Feature: Physician My Appointments
 
+  @UIMyApp
   Scenario Outline:   user(doctor) can see their appointments list and time slots on My Appointments
     Given Go to Medunna web site
     And Navigate and sign in with doctor credentials with username "<username>" and "<password>"
@@ -10,6 +11,7 @@ Feature: Physician My Appointments
       |username|password|
       |doctor1 |Ab12345.|
 
+  @UIMyApp
   Scenario Outline:  user(doctor) can see patient id, start date, end date, status
     Given Go to Medunna web site
     And Navigate and sign in with doctor credentials with username "<username>" and "<password>"
