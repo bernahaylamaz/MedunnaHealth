@@ -20,7 +20,7 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before( value = "@ApiRegistrant")
+    @Before( value = "@TestItems")
     public void setup(){
 
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
@@ -29,17 +29,17 @@ public class Hooks {
     }
 
 
-    @Before(order = 1, value = "@UIRegistration")
+    @Before(order = 1, value = "Edit_appointment")
     public void navigateToRegistrationPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
     }
 
-    @Before(order = 1, value = "@Appointment")
+    @Before(order = 1, value = "@Edit_appointment")
     public void navigateToLandingPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
     }
 
