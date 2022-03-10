@@ -20,26 +20,26 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before( value = "@TestItems")
+    @Before( value = "@ApiRegistrant")
     public void setup(){
 
-        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+        //spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
 
 
     }
 
 
-    @Before(order = 1, value = "Edit_appointment")
+    @Before(order = 1, value = "@UIRegistration")
     public void navigateToRegistrationPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
 
     }
 
-    @Before(order = 1, value = "@Edit_appointment")
+    @Before(order = 1, value = "@Appointment")
     public void navigateToLandingPage(){
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
 
     }
 
@@ -54,7 +54,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-//        Driver.closeDriver();
+   //     Driver.closeDriver();
 
     }
 
