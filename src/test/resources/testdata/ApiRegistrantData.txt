@@ -1,0 +1,1 @@
+Registrant{firstName='Tony', lastName='Barrows', ssn='136-38-2548', login='rex.borer', langKey='en', password='qu18b!X@zVM', email='lloyd.keebler@gmail.com'}
