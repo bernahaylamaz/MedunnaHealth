@@ -15,7 +15,6 @@ Feature: Registrant api test
 
   @ApiRegistrant
   Scenario:  api get request for users
-
     Given user sends the get request for users data
     And user deserializes data to Java
     And user saves the users data to correspondent files

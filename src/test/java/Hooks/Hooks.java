@@ -20,10 +20,10 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before( value = "@ApiRegistrant")
+    @Before( value = "@ValidateApp")
     public void setup(){
 
-        //spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
 
 
     }
@@ -54,7 +54,7 @@ public class Hooks {
             scenario.attach(screenshot, "image/png","screenshots");
         }
 
-   //     Driver.closeDriver();
+        Driver.closeDriver();
 
     }
 

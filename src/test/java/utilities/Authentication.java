@@ -33,6 +33,7 @@ public class Authentication {
 
         response.prettyPrint();
         JsonPath json = response.jsonPath();
+        System.out.println(json.getString("id_token"));
         return json.getString("id_token");
 
     }

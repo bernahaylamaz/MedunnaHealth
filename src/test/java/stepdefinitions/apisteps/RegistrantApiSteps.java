@@ -5,7 +5,6 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.tr.Fakat;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -74,13 +73,13 @@ public class RegistrantApiSteps {
     @Then("user validates api records")
     public void user_validates_api_records() throws Exception {
         response.then().statusCode(201);
-        response.prettyPrint();
+        //response.prettyPrint();
 
         ObjectMapper obj = new ObjectMapper();
 
         Registrant actualRegistrant = obj.readValue(response.asString(), Registrant.class);
 
-        System.out.println(actualRegistrant);
+        //System.out.println(actualRegistrant);
 
         assertEquals(registrant.getFirstName(), actualRegistrant.getFirstName());
         assertEquals(registrant.getLastName(), actualRegistrant.getLastName());
@@ -92,7 +91,7 @@ public class RegistrantApiSteps {
     @Given("user sends the get request for users data")
     public void user_sends_the_get_request_for_users_data() {
 
-
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
         response = getRequest(generateToken(), ConfigurationReader.getProperty("registrant_endpoint"));
 
         //This can be also used
@@ -111,7 +110,7 @@ public class RegistrantApiSteps {
 
     @Given("user deserializes data to Java")
     public void user_deserializes_data_to_java() throws Exception {
-        response.prettyPrint();
+        //response.prettyPrint();
         ObjectMapper obj = new ObjectMapper();
 //
         registrants = obj.readValue(response.asString(), Registrant[].class);
