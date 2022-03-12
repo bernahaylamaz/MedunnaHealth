@@ -43,6 +43,13 @@ public class Hooks {
 
     }
 
+    @Before(order = 1, value = "@UIMyApp")
+    public void navigateToHomePage(){
+
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
+
 
 
     @After

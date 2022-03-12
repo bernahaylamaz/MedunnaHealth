@@ -1,1 +1,9 @@
 Appointment{firstname='Shawn', lastname='Waelchi', ssn='466-18-6616', email='rigoberto.hackett@gmail.com', phoneNumber='637.608.9699', date='06-07-2022'}
+Appointment{firstname='Johnathon', lastname='Abernathy', ssn='028-22-2812', email='shane.trantow@hotmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Lindsy', lastname='Gerhold', ssn='697-96-6154', email='alfredo.casper@yahoo.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='King', lastname='Stiedemann', ssn='732-89-6834', email='tomas.wyman@yahoo.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Chad', lastname='Sanford', ssn='506-85-5885', email='danilo.beer@gmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Juanita', lastname='Brekke', ssn='414-39-6749', email='augustine.barrows@gmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Gilberto', lastname='Thompson', ssn='877-74-6056', email='ileana.legros@gmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Buford', lastname='Koelpin', ssn='786-80-8989', email='ami.lakin@hotmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Charline', lastname='Lueilwitz', ssn='552-11-4525', email='signe.hauck@yahoo.com', phoneNumber='253-283-2837', date='06-07-2022'}

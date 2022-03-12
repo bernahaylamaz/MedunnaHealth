@@ -5,7 +5,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.Keys;
 import pages.AppointmentPage;
 import pojos.Appointment;
 import utilities.Driver;
@@ -26,8 +25,8 @@ public class UIAppointmentSteps {
 
 
     }
-    @Given("user provides the appoinment name {string}")
-    public void user_provides_the_appoinment_name(String firstname) {
+    @Given("user provides the appointment name {string}")
+    public void user_provides_the_appointment_name(String firstname) {
         firstname = faker.name().firstName();
         appointment.setFirstname(firstname);
 
@@ -59,7 +58,7 @@ public class UIAppointmentSteps {
     }
     @When("user provides the phone number {string}")
     public void user_provides_the_phone_number(String phoneNumber) {
-        phoneNumber = faker.phoneNumber().cellPhone();
+        //phoneNumber = faker.phoneNumber().cellPhone();
         appointment.setPhoneNumber(phoneNumber);
 
         Driver.waitAndSendText(appointmentPage.phoneTextbox, phoneNumber);
@@ -70,7 +69,7 @@ public class UIAppointmentSteps {
 //        date = getDate();
         appointment.setDate(date);
 
-        Driver.waitAndSendText(appointmentPage.dateTextbox, date+ Keys.ENTER);
+        Driver.waitAndSendText(appointmentPage.dateTextbox, date);
 
     }
     @Then("user requests appointment and verifies the success message")
@@ -78,7 +77,6 @@ public class UIAppointmentSteps {
 
         Driver.waitAndClick(appointmentPage.requestButton);
         saveAppointData(appointment);
-
         Assert.assertTrue(Driver.waitForVisibility(appointmentPage.successMessageToastContainer, 5).isDisplayed());
     }
 
