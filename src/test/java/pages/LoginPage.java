@@ -33,7 +33,7 @@ public class LoginPage {
     @FindBy(xpath = "//*[text()='Remember me']")
     public WebElement rememberMe;
 
-    @FindBy(xpath = "//*[text()='Did you forget your password']")
+    @FindBy(xpath = "//*[text()='Did you forget your password?']")
     public WebElement forgotPassword;
 
     @FindBy(xpath = "//*[text()='Register a new account']")

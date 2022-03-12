@@ -20,26 +20,31 @@ public class LoginStepDefs {
 
     @Given("user clicks on the login dropdown")
     public void user_clicks_on_the_login_dropdown() {
+
         loginPage.loginDropdown.click();
     }
 
     @Given("user clicks on the sign in button")
     public void user_clicks_on_the_sign_in_button() {
+
         loginPage.signInButton.click();
     }
 
     @Given("user sends username {string}")
     public void user_sends_username(String string) {
+
         loginPage.username.sendKeys(string);
     }
 
     @Given("user sends password {string}")
     public void user_sends_password(String string) {
+
         loginPage.password.sendKeys(string);
     }
 
     @Given("user clicks on the login button")
     public void user_clicks_on_the_login_button() {
+
         loginPage.loginButton.click();
     }
 
@@ -51,16 +56,19 @@ public class LoginStepDefs {
 
     @Then("close the website")
     public void close_the_website() {
+
         Driver.closeDriver();
     }
 
     @Given("verify the option to cancel login")
     public void verify_the_option_to_cancel_login() {
+        Driver.wait(1);
         Assert.assertTrue(loginPage.cancel.isDisplayed());
     }
 
     @Given("verify the remember me option")
     public void verify_the_remember_me_option() {
+        Driver.wait(1);
         Assert.assertTrue(loginPage.rememberMe.isDisplayed());
     }
 
@@ -71,13 +79,19 @@ public class LoginStepDefs {
 
     @Given("verify the option Register a new account")
     public void verify_the_option_register_a_new_account() {
+
         Assert.assertTrue(loginPage.regNewAccount.isDisplayed());
     }
 
     @Then("user signs out")
     public void user_signs_out() {
-        Driver.waitAndClick(commonPageElements.logout);
+        Driver.waitAndClick(commonPageElements.logoutDropdown);
         Driver.wait(1);
+    }
+
+    @Then("user clicks signOut")
+    public void user_clicks_sign_out() {
+        Driver.waitAndClick(commonPageElements.signOut);
     }
 
 

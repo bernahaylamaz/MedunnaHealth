@@ -14,10 +14,10 @@ public class CommonPageElements {
     @FindBy(xpath = "//*[text()='Administration']")
     public WebElement Administration;
 
-    @FindBy(className = "dropdown-item")
-    public WebElement logout;
+    @FindBy(xpath = "//*[@id='account-menu']/a")
+    public WebElement logoutDropdown;
 
-//    @FindBy(xpath = "//*[text()='Sign out']")
-//    public WebElement Logout;
+    @FindBy(xpath = "//*[@id='account-menu']/div/a[3]")
+    public WebElement signOut;
 
 }
