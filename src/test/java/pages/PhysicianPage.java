@@ -5,6 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.security.cert.X509Certificate;
+
 public class PhysicianPage {
 
     public PhysicianPage() {
@@ -42,5 +44,11 @@ public class PhysicianPage {
 
     @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/table/thead/tr/th[4]/span")
     public WebElement status;
+
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div/table/tbody/tr/td[13]/div/a")
+    public  WebElement editbutton;
+
+    @FindBy(xpath = "//*[@id=\"hospitalmsappfrontendApp.appointment.home.createOrEditLabel\"]/span")
+    public  WebElement verifytext;
 
 }
