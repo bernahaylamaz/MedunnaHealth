@@ -1,6 +1,5 @@
 package utilities;
 
-
 import org.apache.commons.io.FileUtils;
 
 import org.openqa.selenium.*;
@@ -187,6 +186,5 @@ public class ReusableMethods {
         select.selectByIndex(optionIndex);
         return select.getFirstSelectedOption();
     }
-
 
 }

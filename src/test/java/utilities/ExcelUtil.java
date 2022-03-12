@@ -1,6 +1,5 @@
 package utilities;
 
-
 import org.apache.poi.ss.usermodel.*;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -15,6 +14,7 @@ public class ExcelUtil {
     private String path;
     public ExcelUtil(String path, String sheetName) {//This Constructor is to open and access the excel file
         this.path = path;
+
         try {
             // Opening the Excel file
             FileInputStream fileInputStream = new FileInputStream(path);
@@ -22,7 +22,9 @@ public class ExcelUtil {
             workBook = WorkbookFactory.create(fileInputStream);
             //getting the worksheet
             workSheet = workBook.getSheet(sheetName);
+
         } catch (Exception e) {
+
             throw new RuntimeException(e);
         }
     }

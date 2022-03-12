@@ -4,6 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -49,7 +51,11 @@ public class Driver {
             } else if ("chrome-headless".equals(browser)) {
                 WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
+            } else if("Edge".equals(browser)){
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver(new EdgeOptions().setHeadless(true));
             }
+
         }
 //        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -100,7 +106,7 @@ public class Driver {
         }
     }
 
-//    Driver.waitANdSendText(Element , "TEXT");
+    //    Driver.waitANdSendText(Element , "TEXT");
     public static void waitAndSendText(WebElement element, String text) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -278,21 +284,21 @@ public class Driver {
         new Actions(Driver.getDriver()).doubleClick(element).build().perform();
     }
 
-//    Parameter1 : WebElement
+    //    Parameter1 : WebElement
 //    Parameter2:  String
 //    Driver.selectByVisibleText(dropdown element, "CHECKING-91303-116.98$")
     public static void selectByVisibleText(WebElement element, String text) {
         Select objSelect = new Select(element);
         objSelect.selectByVisibleText(text);
     }
-//    Parameter1 : WebElement
+    //    Parameter1 : WebElement
 //    Parameter2:  int
 //    Driver.selectByIndex(dropdown element, 1)
     public static void selectByIndex(WebElement element, int index) {
         Select objSelect = new Select(element);
         objSelect.selectByIndex(index);
     }
-//    Parameter1 : WebElement
+    //    Parameter1 : WebElement
 //    Parameter2:  String
 //    Driver.selectByIndex(dropdown element, "91303")
     public static void selectByValue(WebElement element, String value) {
