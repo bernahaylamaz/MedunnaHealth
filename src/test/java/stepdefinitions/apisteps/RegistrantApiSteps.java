@@ -5,22 +5,15 @@ import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.tr.Fakat;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import pojos.Registrant;
 import utilities.ConfigurationReader;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
 import static junit.framework.TestCase.assertEquals;
-import static utilities.Authentication.generateToken;
 import static utilities.WriteToTxt.saveRegistrantData;
-import static Hooks.Hooks.spec;
+import static hooks.Hooks.spec;
 public class RegistrantApiSteps  {
 
     Registrant registrant = new Registrant();

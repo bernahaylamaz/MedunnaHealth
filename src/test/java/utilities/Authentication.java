@@ -1,5 +1,4 @@
 package utilities;
-import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -7,7 +6,7 @@ import io.restassured.response.Response;
 import java.util.HashMap;
 import java.util.Map;
 
-import static Hooks.Hooks.spec;
+import static hooks.Hooks.spec;
 import static io.restassured.RestAssured.given;
 
 public class Authentication {
