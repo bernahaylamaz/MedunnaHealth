@@ -11,7 +11,7 @@ Feature: Registrant api test
 
     Examples: api test data
       |firstname|lastname|SSN|email|username|password|lan|
-      |Recep    |Aykurt  |293-38-2938|recep@gmail.com|recepaykurt|Recep123.|en|
+      |Recep    |Aykurt  |293-392-2388|recep@gmail.com|recepaykurt|Recep123.|en|
 
   @ApiRegistrant
   Scenario:  api get request for users
