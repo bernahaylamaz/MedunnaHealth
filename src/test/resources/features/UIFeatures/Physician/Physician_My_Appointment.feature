@@ -1,3 +1,5 @@
+
+@Smoke
 Feature: edit appointment
 
   @Edit_Appointment
