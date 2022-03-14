@@ -10,52 +10,48 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
+import static utilities.DatabaseUtility.createConnection;
+
 public class Hooks {
     @Before
-    public void setUp(){
-
-
+    public void setUp() {
     }
 
     //
     public static RequestSpecification spec;
 
-    @Before( value = "@ValidateApp")
-    public void setup(){
-
+    @Before(value = "@ValidateApp")
+    public void setup() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
-
-
     }
 
 
     @Before(order = 1, value = "@UIRegistration")
-    public void navigateToRegistrationPage(){
-
+    public void navigateToRegistrationPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
-
     }
 
-    @Before(order = 1, value = "@Appointment")
-    public void navigateToLandingPage(){
+//UIRegistration
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
-
+    @Before(order=0,value = "@EndToEnd")
+    public void createNewDBConnection() {
+        createConnection(ConfigurationReader.getProperty("db_credentials_url"),
+                ConfigurationReader.getProperty("db_username"),
+                ConfigurationReader.getProperty("db_password"));
     }
 
-
+    @Before(order = 1, value = "@DBTest")
+    public void connectionDB() {
+    }
 
     @After
-    public void tearDown(Scenario scenario){
+    public void tearDown(Scenario scenario) {
 
         if (scenario.isFailed()) {
-            final byte[] screenshot=((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
 
-            scenario.attach(screenshot, "image/png","screenshots");
+            scenario.attach(screenshot, "image/png", "screenshots");
         }
-
         Driver.closeDriver();
-
     }
-
 }

@@ -58,7 +58,7 @@ public class UIAppointmentSteps {
     }
     @When("user provides the phone number {string}")
     public void user_provides_the_phone_number(String phoneNumber) {
-        phoneNumber = faker.phoneNumber().cellPhone();
+        //phoneNumber = faker.phoneNumber().cellPhone();
         appointment.setPhoneNumber(phoneNumber);
 
         Driver.waitAndSendText(appointmentPage.phoneTextbox, phoneNumber);

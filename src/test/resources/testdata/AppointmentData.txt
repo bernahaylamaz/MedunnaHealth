@@ -1,3 +1,8 @@
 Appointment{firstname='Shawn', lastname='Waelchi', ssn='466-18-6616', email='rigoberto.hackett@gmail.com', phoneNumber='637.608.9699', date='06-07-2022'}
 Appointment{firstname='Cecila', lastname='Bins', ssn='154-78-9702', email='carolann.koch@gmail.com', phoneNumber='1-857-873-9289', date='06-07-2022'}
 Appointment{firstname='Quincy', lastname='Kemmer', ssn='052-78-4332', email='roberto.schaefer@yahoo.com', phoneNumber='1-613-803-9176', date='06-07-2022'}
+Appointment{firstname='Mark', lastname='Murray', ssn='651-34-6161', email='andre.boyle@yahoo.com', phoneNumber='1-510-650-1902', date='06-07-2022'}
+Appointment{firstname='Glynis', lastname='Boyle', ssn='830-50-5408', email='kendrick.torphy@gmail.com', phoneNumber='1-959-716-8160', date='06-07-2022'}
+Appointment{firstname='Fermin', lastname='Jacobson', ssn='877-50-4796', email='syble.buckridge@hotmail.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Julian', lastname='Langworth', ssn='485-76-3005', email='maribeth.balistreri@yahoo.com', phoneNumber='253-283-2837', date='06-07-2022'}
+Appointment{firstname='Phylicia', lastname='Muller', ssn='067-47-9296', email='anthony.schimmel@yahoo.com', phoneNumber='253-283-2837', date='06-07-2022'}
