@@ -48,11 +48,11 @@ public class Physician_MyAppointmentAPI {
             System.out.println("size: " + appointment_apis.length);
             for (int i = 0; i < appointment_apis.length; i++) {
                 if (appointment_apis[i].getPatient() != null) {//to ignore the null ones
-//                    System.out.println("Name: " + appointment_apis[i].getPatient().getFirstName());
-//                    System.out.println("LastName: " + appointment_apis[i].getPatient().getLastName());
-//                    System.out.println("Patient ID: "+appointment_apis[i].getPatient().getId());
-//                    System.out.println("App Start Date: "+appointment_apis[i].getStartDate());
-//                    System.out.println("App End Date: "+appointment_apis[i].getEndDate());
+                    System.out.println("Name: " + appointment_apis[i].getPatient().getFirstName());
+                    System.out.println("LastName: " + appointment_apis[i].getPatient().getLastName());
+                    System.out.println("Patient ID: "+appointment_apis[i].getPatient().getId());
+                    System.out.println("App Start Date: "+appointment_apis[i].getStartDate());
+                    System.out.println("App End Date: "+appointment_apis[i].getEndDate());
 
                     if (appointment_apis[i].getPatient().getUser() != null)//to ignore the null ones
                         System.out.println("SSN: " + appointment_apis[i].getPatient().getUser().getSsn());
