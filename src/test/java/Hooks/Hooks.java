@@ -20,7 +20,7 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before(value = "@ValidateApp")
+    @Before(value = "@PutUserRequest")
     public void setup() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
     }
@@ -33,16 +33,16 @@ public class Hooks {
 
 //UIRegistration
 
-    @Before(order=0,value = "@EndToEnd")
+    @Before(order=0,value = "@DBUsers")
     public void createNewDBConnection() {
         createConnection(ConfigurationReader.getProperty("db_credentials_url"),
                 ConfigurationReader.getProperty("db_username"),
                 ConfigurationReader.getProperty("db_password"));
     }
 
-    @Before(order = 1, value = "@DBTest")
-    public void connectionDB() {
-    }
+   // @Before(order = 1, value = "@DBTest")
+    //public void connectionDB() {
+   // }
 
     @After
     public void tearDown(Scenario scenario) {

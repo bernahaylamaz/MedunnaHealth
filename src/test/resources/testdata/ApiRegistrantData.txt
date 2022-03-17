@@ -30,3 +30,7 @@ Registrant{firstName='Sherry', lastName='Hayes', ssn='468-14-4013', login='Sherr
 Registrant{firstName='Abe', lastName='Gutmann', ssn='288-70-5106', login='AbeGutmann', langKey='null', password='VPW69cE3X#3uy7yR3O', email='giovanni.upton@gmail.com'}
 Registrant{firstName='Tara', lastName='Crooks', ssn='665-22-9135', login='TaraCrooks', langKey='null', password='3q9!Q04*$44IW4x', email='angelo.nitzsche@yahoo.com'}
 Registrant{firstName='Aurora', lastName='Weimann', ssn='365-12-3985', login='AuroraWeimann', langKey='null', password='A11g4sbum7zO6x$nH', email='loise.klein@hotmail.com'}
+Registrant{firstName='Alia', lastName='Kling', ssn='560-44-1480', login='AliaKling', langKey='null', password='m1@qL#zTVmA7wHzK', email='fausto.reynolds@gmail.com'}
+Registrant{firstName='Dee', lastName='Pouros', ssn='327-17-6044', login='DeePouros', langKey='null', password='gDbWr37M', email='nilda.metz@hotmail.com'}
+Registrant{firstName='Wilmer', lastName='Kuphal', ssn='234-13-2260', login='rea.hand', langKey='en', password='oSP56gF4%P0Us6', email='terence.cummerata@gmail.com', id=0}
+Registrant{firstName='Shaina', lastName='Gaylord', ssn='549-71-9142', login='renita.torp', langKey='en', password='Z3q12s&zX', email='adell.wilderman@yahoo.com', id=0}
