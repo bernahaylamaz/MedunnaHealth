@@ -109,6 +109,28 @@ public static void saveAppointmentAPIData(String fileName, Appointment_API[] app
 
     }
 
+    public static void saveAppointmentDataDB(List<Object> AppIDs){
+        try{
+            //src/test/resources/testdata/DatabaseAppointmentsData.txt
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("database_appointments_data"), false);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+            for(Object eachID: AppIDs) {
+                writer.append(eachID + ",\n");
+            }
+
+            writer.close();
+
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
+
 
     public static void saveRegistrantData(Registrant [] registrants){
         try{
