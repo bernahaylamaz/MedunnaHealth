@@ -63,4 +63,82 @@
         |firstname|lastname|SSN|email|phoneNumber|date|
         |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|06-07-2022|
 
+    Scenario Outline:  edit appointment
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      Then  Verify that Physician can click edit button
+
+      Examples:
+        |username|password|
+        |doctor1 |Ab12345.|
+
+    Scenario Outline: verify appointment
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      Then  Physician Verify that user(doctor) can see patient id, start date, end date, status
+
+      Examples:
+        |username|password|
+        |doctor1 |Ab12345.|
+
+    Scenario Outline: type anamnesis
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      And   Physician can click edit button
+      Then  Physician type in Anamnesis "<anamnesis>", Treatment "<treatment>" and Diagnosis "<diagnosis>" as required fields and click save button
+
+      Examples:
+        |username|password|anamnesis|treatment |diagnosis|
+        |doctor1 |Ab12345.|blood test|workout  |cholesterol |
+
+    Scenario Outline: Verify Prescription and description
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      And   Physician can click edit button
+      Then  Physician Verify Prescription and description
+
+      Examples:
+        |username|password|
+        |doctor1 |Ab12345.|
+
+    Scenario Outline: Verify status
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      And   Physician can click edit button
+      Then  Physician verify status
+
+      Examples:
+        |username|password|
+        |doctor1 |Ab12345.|
+
+#    Scenario Outline: may request
+#      Given Go to Medunna web site
+#      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+#      And   Click on My Pages tab and choose My Appointments
+#      And   Physician can click edit button
+#      And   Physician Click on Request test button
+#      Then  Physician verify Test Items
+#
+#      Examples:
+#        |username|password|
+#        |doctor1 |Ab12345.|
+
+    Scenario Outline: checmark test
+      Given Go to Medunna web site
+      And   Navigate and sign in with doctor credentials with username "<username>" and "<password>"
+      And   Click on My Pages tab and choose My Appointments
+      And   Physician can click edit button
+      And   Physician Click on Request test button
+      And  Physician checkmark Glucose, Urea, Creatinine, Sodium
+      Then save
+
+      Examples:
+        |username|password|
+        |doctor1 |Ab12345.|
+
 

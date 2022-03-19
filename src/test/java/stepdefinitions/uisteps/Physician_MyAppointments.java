@@ -50,7 +50,7 @@ public class Physician_MyAppointments {
         System.out.println(fromDate);
         //System.out.println(DateTimeFormatter.ofPattern("yyyy-MM-dd", Locale.ENGLISH).format(ldt));
         Driver.waitAndSendText(physicianPage.fromDate, fromDate);
-        Driver.waitAndSendText(physicianPage.toDate, "03/21/2022");
+        Driver.waitAndSendText(physicianPage.toDate, "03/30/2022");
 
     }
 
@@ -66,8 +66,8 @@ public class Physician_MyAppointments {
     @Then("Verify that user\\(doctor) can see patient id, start date, end date, status")
     public void verify_that_user_doctor_can_see_patient_id_start_date_end_date_status() {
         waitForVisibility(physicianPage.IDText,5);
-        String dummy =physicianPage.IDText.getText();
-        System.out.println(dummy);
+//        String dummy =physicianPage.IDText.getText();
+//        System.out.println(dummy);
 
         Assert.assertEquals("ID",physicianPage.IDText.getText());
         Assert.assertEquals("Start DateTime",physicianPage.startDateTime.getText());
