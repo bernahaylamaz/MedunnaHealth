@@ -7,9 +7,9 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.AppointmentPage;
 import pojos.Appointment;
+import pojos.Appointment_API;
 import utilities.Driver;
 
-import static utilities.DateUtils.getDate;
 import static utilities.WriteToTxt.saveAppointData;
 
 public class UIAppointmentSteps {
@@ -58,7 +58,7 @@ public class UIAppointmentSteps {
     }
     @When("user provides the phone number {string}")
     public void user_provides_the_phone_number(String phoneNumber) {
-        phoneNumber = faker.phoneNumber().cellPhone();
+        //phoneNumber = faker.phoneNumber().cellPhone();
         appointment.setPhoneNumber(phoneNumber);
 
         Driver.waitAndSendText(appointmentPage.phoneTextbox, phoneNumber);

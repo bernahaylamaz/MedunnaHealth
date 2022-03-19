@@ -1,6 +1,4 @@
 package utilities;
-
-
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
@@ -35,9 +33,7 @@ public class Authentication {
 
         response.prettyPrint();
         JsonPath json = response.jsonPath();
-
-
-
+        System.out.println(json.getString("id_token"));
         return json.getString("id_token");
 
     }
