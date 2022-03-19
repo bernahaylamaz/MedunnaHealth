@@ -42,39 +42,39 @@ public class Physician_MyAppointmentAPI {
 
     @Given("user deserializes appointment data to Java")
 
-        public void user_deserializes_appointment_data_to_java() throws IOException {
-            ObjectMapper obj = new ObjectMapper();
+    public void user_deserializes_appointment_data_to_java() throws IOException {
+        ObjectMapper obj = new ObjectMapper();
         appointment_apis = obj.readValue(response.asString(), Appointment_API[].class);
-            System.out.println("size: " + appointment_apis.length);
-            for (int i = 0; i < appointment_apis.length; i++) {
-                if (appointment_apis[i].getPatient() != null) {//to ignore the null ones
-                    System.out.println("Name: " + appointment_apis[i].getPatient().getFirstName());
-                    System.out.println("LastName: " + appointment_apis[i].getPatient().getLastName());
-                    System.out.println("Patient ID: "+appointment_apis[i].getPatient().getId());
-                    System.out.println("App Start Date: "+appointment_apis[i].getStartDate());
-                    System.out.println("App End Date: "+appointment_apis[i].getEndDate());
+        System.out.println("size: " + appointment_apis.length);
+        for (int i = 0; i < appointment_apis.length; i++) {
+            if (appointment_apis[i].getPatient() != null) {//to ignore the null ones
+                System.out.println("Name: " + appointment_apis[i].getPatient().getFirstName());
+                System.out.println("LastName: " + appointment_apis[i].getPatient().getLastName());
+                System.out.println("Patient ID: " + appointment_apis[i].getPatient().getId());
+                System.out.println("App Start Date: " + appointment_apis[i].getStartDate());
+                System.out.println("App End Date: " + appointment_apis[i].getEndDate());
 
-                    if (appointment_apis[i].getPatient().getUser() != null)//to ignore the null ones
-                        System.out.println("SSN: " + appointment_apis[i].getPatient().getUser().getSsn());
-                }
+                if (appointment_apis[i].getPatient().getUser() != null)//to ignore the null ones
+                    System.out.println("SSN: " + appointment_apis[i].getPatient().getUser().getSsn());
             }
-
-
-
         }
+
+
+    }
 
 
     @Given("user saves the users appointment data to correspondent files")
     public void user_saves_the_users_appointment_data_to_correspondent_files() {
-        saveAppointmentAPIData(fileName,appointment_apis);
+        saveAppointmentAPIData(fileName, appointment_apis);
 
     }
+
     @Then("user validates api appointment with {string} , {string}, {string}, {string}")
     public void user_validates_api_appointment_with(String id, String startDate, String endDate, String status) {
 
-        List<String > actualAppData = getAPIAppointments();
+        List<String> actualAppData = getAPIAppointments();
         System.out.println(actualAppData);
-        List<String > expectedAppData = new ArrayList<>();
+        List<String> expectedAppData = new ArrayList<>();
         expectedAppData.add(id);
         //Assert.assertTrue(actualAppData.containsAll(expectedAppData));
 
@@ -84,18 +84,5 @@ public class Physician_MyAppointmentAPI {
         System.out.println("*******");
         System.out.println(expectedAppData);
         Assert.assertTrue(actualAppData.containsAll(expectedAppData));
-//
-//
-
-
-
-
-
-        //Assert.assertTrue(actualAppData.containsAll(expectedAppData));
-
     }
-
-//        actualAppointment1=
-//        assertEquals(registrant.getFirstName(), actualRegistrant.getFirstName());
-
 }

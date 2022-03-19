@@ -35,7 +35,7 @@ public class RegistrantApiSteps  {
 
     @Given("user sets the necessary path params")
     public void user_sets_the_necessary_path_params() {
-
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
         spec.pathParams("first", "api", "second", "register");
 
     }
