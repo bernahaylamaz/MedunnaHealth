@@ -2,7 +2,6 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.junit.Test;
 import pages.PasswordPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
