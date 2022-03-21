@@ -13,6 +13,7 @@ public class LoginStepDefs {
     LoginPage loginPage = new LoginPage();
     CommonPageElements commonPageElements = new CommonPageElements();
 
+
     @Given("user is on Medunna Health website")
     public void user_is_on_medunna_health_website() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));

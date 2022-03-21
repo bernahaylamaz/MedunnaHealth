@@ -321,4 +321,20 @@ public class Driver {
     public static void waitAndClickLocationText(WebElement element, String value) {
         Driver.getDriver().findElement(By.xpath("//*[text()='" + value + "']")).click();
     }
+
+    /**
+     * This is JavaScript Executor
+     *
+     * @return
+     */
+
+    public static JavascriptExecutor getJSExecutor() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        return js;
+    }
+
+    public static void jsClick(WebElement element) {
+        getJSExecutor().executeScript("arguments[0].click();", element);
+
+    }
 }
