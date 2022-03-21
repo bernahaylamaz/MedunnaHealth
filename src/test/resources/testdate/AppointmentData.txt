@@ -1,0 +1,3 @@
+Appointment{firstname='Shawn', lastname='Waelchi', ssn='466-18-6616', email='rigoberto.hackett@gmail.com', phoneNumber='637.608.9699', date='06-07-2022'}
+Appointment{firstname='Cecila', lastname='Bins', ssn='154-78-9702', email='carolann.koch@gmail.com', phoneNumber='1-857-873-9289', date='06-07-2022'}
+Appointment{firstname='Quincy', lastname='Kemmer', ssn='052-78-4332', email='roberto.schaefer@yahoo.com', phoneNumber='1-613-803-9176', date='06-07-2022'}
