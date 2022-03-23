@@ -7,8 +7,12 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import pages.LoginPage;
 import utilities.ConfigurationReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.io.IOException;
 
 import static utilities.DatabaseUtility.createConnection;
 
@@ -31,6 +35,12 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
     }
 
+    @Before(order = 1, value = "@Physician")
+    public void navigateToMedunnaAndLogin() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
+
+    }
+
 //UIRegistration
 
     @Before(order=0,value = "@DBUsers")
@@ -44,14 +54,34 @@ public class Hooks {
     //public void connectionDB() {
    // }
 
+//    @After
+//    public void tearDown(Scenario scenario) throws IOException {
+//
+//        if (scenario.isFailed()) {
+//            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+//
+//            scenario.attach(screenshot, "image/png", "screenshots");
+//
+//            if (scenario.isFailed()) {
+//            screenshot = ReusableMethods.getScreenshot("failed/" + scenario.getName());
+//        }else{
+//            screenshot = ReusableMethods.getScreenshot("passed/" + scenario.getName());
+//        }
+//        scenario.attach(screenshot,"image/png", scenario.getName());
+//        }
+//        //Driver.closeDriver();
+
     @After
     public void tearDown(Scenario scenario) {
 
+        byte[] screenshot;
         if (scenario.isFailed()) {
-            final byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-
-            scenario.attach(screenshot, "image/png", "screenshots");
+            screenshot = ReusableMethods.takeScreenshot("failed/" + scenario.getName());
+        }else{
+            screenshot = ReusableMethods.takeScreenshot("passed/" + scenario.getName());
         }
-        //Driver.closeDriver();
+        scenario.attach(screenshot,"image/png", scenario.getName());
+
+        Driver.closeDriver();
     }
 }

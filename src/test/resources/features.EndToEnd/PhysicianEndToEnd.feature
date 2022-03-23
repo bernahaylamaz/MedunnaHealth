@@ -1,10 +1,9 @@
-Feature: Physician test
-
+Feature: Physician End To End test
 
   @Physician
   Scenario Outline: test physician
-    Given user is on Medunna Health website
-    And user clicks on the login dropdown
+
+    Given user clicks on the login dropdown
     And user clicks on the sign in button
     And user sends username "<username>"
     And user sends password "<password>"

@@ -76,6 +76,7 @@ public class UIAppointmentSteps {
     public void user_requests_appointment_and_verifies_the_success_message() {
 
         Driver.waitAndClick(appointmentPage.requestButton);
+        System.out.println(appointment);
         saveAppointData(appointment);
         Assert.assertTrue(Driver.waitForVisibility(appointmentPage.successMessageToastContainer, 5).isDisplayed());
     }

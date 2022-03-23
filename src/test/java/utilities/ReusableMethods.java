@@ -17,6 +17,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
+import utilities.Driver;
 
 public class ReusableMethods {
     /*HOW DO YOU GET SCREENSHOT?
@@ -188,5 +189,36 @@ public class ReusableMethods {
         return select.getFirstSelectedOption();
     }
 
+    /**
+     * This is for taking screenshots
+     *
+     * @param fileName
+     */
 
+    public static byte[] takeScreenshot(String fileName) {
+        TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
+        byte[] bytes = ts.getScreenshotAs(OutputType.BYTES);
+        File sourceFile = ts.getScreenshotAs(OutputType.FILE);
+        try {
+            FileUtils.copyFile(sourceFile, new File(System.getProperty("user.dir")+"/screenshots/" + fileName + getTimeStamp("yyyy-MM-dd-HH-mm-ss") + ".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bytes;
+    }
+
+    /**
+     * This method is for putting time stamp in the of the screenshot
+     *
+     * @param pattern
+     * @return
+     */
+
+
+    public static String getTimeStamp(String pattern) {
+
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
+        return sdf.format(date);
+    }
 }

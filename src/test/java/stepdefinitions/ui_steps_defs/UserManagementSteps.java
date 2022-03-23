@@ -23,6 +23,7 @@ import static utilities.DateUtils.getDate;
 import static utilities.Driver.getDriver;
 import static utilities.Driver.jsClick;
 import static utilities.ReusableMethods.waitForVisibility;
+import static utilities.WriteToTxt.savePhysicianData;
 
 public class UserManagementSteps {
     UserManagementPage userManagementPage = new UserManagementPage();
@@ -68,6 +69,8 @@ public class UserManagementSteps {
         physicianPojo.setEmail(email);
         physicianPojo.setSsn(ssn);
 
+        System.out.println(physicianPojo);
+        //savePhysicianData(physicianPojo);
         //System.out.println(firstName+"\n"+lastName+"\n"+login+"\n"+email+"\n"+ssn);
 
         Driver.waitAndSendText(userManagementPage.loginInput, login);
@@ -89,10 +92,21 @@ public class UserManagementSteps {
     @Given("user hit create a new physician button and search by ssn")
     public void user_hit_create_a_new_physician_button_and_search_by_ssn() {
 
-       jsClick(userManagementPage.createPhysicianButton);
-
+        jsClick(userManagementPage.createPhysicianButton);
+        jsClick(userManagementPage.ssnSearchCheck);
+        Driver.waitAndSendText(userManagementPage.ssnSearchTextBox, physicianPojo.getSsn());
+        jsClick(userManagementPage.searchUserButton);
 
     }
 
+    @Given("user adds phone number {string}, exam fee \"{int}\"and hit save button")
+    public void user_adds_phone_number_exam_fee_and_hit_save_button(String phoneNumber, Integer examFee) {
+        //phoneNumber = String.valueOf(faker.phoneNumber());
+        Driver.waitAndSendText(userManagementPage.physicianPhone, phoneNumber);
+        Driver.waitAndSendText(userManagementPage.physicianExamFee, String.valueOf(examFee));
+        Driver.wait(1);
+        Driver.waitAndClick(userManagementPage.physicianSaveButton);
+    }
 
 }
+

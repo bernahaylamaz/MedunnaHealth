@@ -2,6 +2,7 @@ package utilities;
 
 import pojos.Appointment;
 import pojos.Appointment_API;
+import pojos.PhysicianPojo;
 import pojos.Registrant;
 
 import java.io.BufferedWriter;
@@ -33,7 +34,27 @@ public class WriteToTxt {
 
 
     }
+    public static void savePhysicianData(PhysicianPojo physician){
+        try{
 
+            FileWriter fileWriter = new FileWriter(ConfigurationReader.getProperty("physician_data"), true);
+
+            BufferedWriter writer = new BufferedWriter(fileWriter);
+
+
+            writer.append(physician+"\n");
+
+
+            writer.close();
+
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+
+    }
     public static void saveAppointData(Appointment appointment){
 
         try{

@@ -51,6 +51,24 @@ public class UserManagementPage {
     @FindBy(xpath = "//*[@id=\"jh-create-entity\"]/span")
     public WebElement createPhysicianButton;
 
+    @FindBy(id="useSSNSearch")
+    public WebElement ssnSearchCheck;
+
+    @FindBy(id="searchSSN")
+    public WebElement ssnSearchTextBox;
+
+    @FindBy(xpath = "//*[@id=\"app-view-container\"]/div/div/div/div/div[2]/div/form/div[1]/div[2]/div/button")
+    public WebElement searchUserButton;
+
+    @FindBy(id="physician-phone")
+    public WebElement physicianPhone;
+
+    @FindBy(id="physician-examFee")
+    public WebElement physicianExamFee;
+
+    @FindBy(xpath = "//*[@id=\"save-entity\"]/span")
+    public WebElement physicianSaveButton;
+
 
 
 

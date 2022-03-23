@@ -120,7 +120,7 @@ public class ReadTxt {
             //Read the records of the file in given location
             BufferedReader br = new BufferedReader(fileReader);
 
-            String line = br.readLine();//856-45-6789,
+            String line = br.readLine();
 
             while(line != null){
 
