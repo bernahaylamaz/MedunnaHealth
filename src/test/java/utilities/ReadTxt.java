@@ -201,8 +201,71 @@ public class ReadTxt {
         return list;
     }
 
+    public static List<String> getPhysiciansIDs(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("database_physician_data"));
+
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();//IDs
+
+            while(line != null){
+
+                String AppID = line.split(",")[0];
+                list.add(AppID);
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
+
+    public static List<String> getAllPatientInfo(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("database_patient_info"));
+
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();//IDs
+
+            while(line != null){
+
+                String AppID = line.split(",")[0];
+                list.add(AppID);
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
 
 
 
 
+}
 }

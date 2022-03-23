@@ -62,15 +62,14 @@ public class RegistrantApiSteps  {
     }
     @Given("user sends the POST request and gets the response")
     public void user_sends_the_post_request_and_gets_the_response() {
-
-
-
         response = given().spec(spec).contentType(ContentType.JSON).body(registrant).when().post("/{first}/{second}");
     }
+
     @When("user saves the api records to correspondent files")
     public void user_saves_the_api_records_to_correspondent_files() {
         saveRegistrantData(registrant);
     }
+
     @Then("user validates api records")
     public void user_validates_api_records() throws  Exception{
         response.then().statusCode(201);

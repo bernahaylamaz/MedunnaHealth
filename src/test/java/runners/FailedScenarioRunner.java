@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         },
 //        Running Path : @target/failedRerun.txt
         features = "@target/failedRerun.txt",
-        glue = {"stepdefinitions", "testdate/Hooks"},
+        glue = {"stepdefinitions", "testdata/Hooks"},
         dryRun = false
 )
 public class FailedScenarioRunner {

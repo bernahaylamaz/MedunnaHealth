@@ -17,16 +17,16 @@ public class Hooks {
     public void setUp() {
     }
 
-    //
+
     public static RequestSpecification spec;
 
-    @Before(value = "@PutUserRequest")
+    @Before(value = "@API_view_patient_info")
     public void setup() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
     }
 
 
-    @Before(order = 1, value = "@UIRegistration")
+    @Before(order = 1, value = "@View_Impatient_by_Physician")
     public void navigateToRegistrationPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
     }

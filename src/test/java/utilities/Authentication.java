@@ -15,6 +15,7 @@ public class Authentication {
 
 
     public static String generateToken(){
+        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
 
         //Set the base url
         //api/authenticate

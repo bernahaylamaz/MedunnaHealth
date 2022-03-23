@@ -7,7 +7,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.AppointmentPage;
 import pojos.Appointment;
-import pojos.Appointment_API;
+
 import utilities.Driver;
 
 import static utilities.WriteToTxt.saveAppointData;

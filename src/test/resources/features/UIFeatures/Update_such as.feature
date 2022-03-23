@@ -16,4 +16,4 @@ Feature: update such as
 
     Examples: test data
     |Username|Password|
-    |Admin80 |Welcome123!
+    |Admin80 |Welcome123!|
