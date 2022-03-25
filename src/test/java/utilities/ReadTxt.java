@@ -146,6 +146,152 @@ public class ReadTxt {
         return list;
     }
 
+    public static List<String> getPhysicianAPI(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("physician_API_records"));
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();
+
+            while(line != null){
+
+                String firstName = line.split(",")[0];
+                list.add(firstName);
+                String lastName = line.split(",")[1];
+                list.add(lastName);
+                String ssn = line.split(",")[2];
+                list.add(ssn);
+
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
+    public static List<String> getPhysicianUI(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("physician_data"));
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();
+
+            while(line != null){
+
+                String firstName = line.split(",")[0];
+                list.add(firstName);
+                String lastName = line.split(",")[1];
+                list.add(lastName);
+                String ssn = line.split(",")[2];
+                list.add(ssn);
+
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
+
+    public static List<String> getPhysicianUI_DB(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("physician_data"));
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();
+
+            while(line != null){
+
+                String firstName = line.split(",")[0];
+                list.add(firstName);
+                String lastName = line.split(",")[1];
+                list.add(lastName);
+//                String ssn = line.split(",")[2];
+//                list.add(ssn);
+
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
+    public static List<String> getPhysicianDB(){
+        List <String > list = new ArrayList<>();
+
+
+        try{
+
+            //identify file location
+
+            FileReader fileReader = new FileReader(ConfigurationReader.getProperty("database_physician_data"));
+            //Read the records of the file in given location
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line = br.readLine();
+
+            while(line != null){
+
+                String firstName = line.split(",")[18];
+                firstName=firstName.split("=")[1];
+                list.add(firstName);
+                String lastName = line.split(",")[4];
+                lastName=lastName.split("=")[1];
+                list.add(lastName);
+
+
+
+                line = br.readLine();
+
+            }
+
+        }catch (Exception e){
+
+            e.printStackTrace();
+
+        }
+
+        return list;
+    }
 
     public static List<Registrant> getAllRegistrants(){
         List <Registrant > list = new ArrayList<>();

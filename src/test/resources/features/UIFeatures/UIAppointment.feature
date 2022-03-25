@@ -1,9 +1,8 @@
 Feature: appointments test
 
 
-
-
-  @Appointment
+  @Regression
+    @Appointment
   Scenario Outline: test appointments
     Given user clicks on make an appointment
     And user provides the appointment name "<firstname>"
@@ -13,5 +12,5 @@ Feature: appointments test
     And user provides the date "<date>"
     Then user requests appointment and verifies the success message
     Examples: test data
-      |firstname|lastname|SSN|email|phoneNumber|date|
-      |Cetin    |Isilak  |203-38-2837|cetin@gmail.com|253-283-2837|06-07-2022|
+      | firstname | lastname | SSN         | email           | phoneNumber  | date       |
+      | Cetin     | Isilak   | 203-38-2837 | cetin@gmail.com | 253-283-2837 | 06-07-2022 |

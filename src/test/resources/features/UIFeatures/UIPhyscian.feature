@@ -1,7 +1,7 @@
 Feature: Physician test
 
+  @SmokeTestAPI @SmokeTestDB @PhysicianUI
 
-  @Physician
   Scenario Outline: test physician
     Given user is on Medunna Health website
     And user clicks on the login dropdown
@@ -18,6 +18,7 @@ Feature: Physician test
     And user adds phone number "<phoneNumber>", exam fee "<examFee>"and hit save button
 
     Examples: credentials
-      | username | password    | login   | firstName | lastName | ssn         |phoneNumber|examFee|
-      | Admin80  | Welcome123! | hello33 | Jonny     | Sweet    | 329-98-7825 |677-980-9998|999    |
-      | Admin80  | Welcome123! | hello33 | Jonny     | Sweet    | 329-98-7825 |677-980-9998|999    |
+      | username | password    | login   | firstName | lastName | ssn         | phoneNumber  | examFee |
+      | Admin80  | Welcome123! | hello33 | Jonny     | Sweet    | 329-98-7825 | 677-980-9998 | 999     |
+#      | Admin80  | Welcome123! | hello33 | Jonny     | Sweet    | 329-98-7825 |677-980-9998|999    |
+

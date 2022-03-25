@@ -69,8 +69,9 @@ public class UserManagementSteps {
         physicianPojo.setEmail(email);
         physicianPojo.setSsn(ssn);
 
-        System.out.println(physicianPojo);
-        //savePhysicianData(physicianPojo);
+        System.out.println(physicianPojo.getFirstName());
+        System.out.println(physicianPojo.getSsn());
+        savePhysicianData(physicianPojo);
         //System.out.println(firstName+"\n"+lastName+"\n"+login+"\n"+email+"\n"+ssn);
 
         Driver.waitAndSendText(userManagementPage.loginInput, login);

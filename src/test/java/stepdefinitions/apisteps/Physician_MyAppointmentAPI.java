@@ -30,8 +30,8 @@ public class Physician_MyAppointmentAPI {
 
     @Given("user sets the necessary path params for appointments")
     public void user_sets_the_necessary_path_params_for_appointments() {
-        spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
-        spec.pathParams("first", "api", "second", "appointments");
+        //spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
+        //spec.pathParams("first", "api", "second", "appointments");
     }
 
     @Given("user sends the get request for appointment data")

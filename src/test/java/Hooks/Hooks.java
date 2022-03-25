@@ -24,7 +24,7 @@ public class Hooks {
     //
     public static RequestSpecification spec;
 
-    @Before(value = "@PutUserRequest")
+    @Before(order =0 ,value = "@PhysicianAPI")
     public void setup() {
         spec = new RequestSpecBuilder().setBaseUri(ConfigurationReader.getProperty("base_url")).build();
     }
@@ -35,7 +35,7 @@ public class Hooks {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_registration_url"));
     }
 
-    @Before(order = 1, value = "@Physician")
+    @Before(order = 1, value = "@PhysicianUI")
     public void navigateToMedunnaAndLogin() {
         Driver.getDriver().get(ConfigurationReader.getProperty("medunna_login_url"));
 
@@ -43,7 +43,7 @@ public class Hooks {
 
 //UIRegistration
 
-    @Before(order=0,value = "@DBUsers")
+    @Before(order=0,value = "@DBPhysician")
     public void createNewDBConnection() {
         createConnection(ConfigurationReader.getProperty("db_credentials_url"),
                 ConfigurationReader.getProperty("db_username"),

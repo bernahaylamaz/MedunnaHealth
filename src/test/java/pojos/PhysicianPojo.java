@@ -9,16 +9,22 @@ public class PhysicianPojo {
     private String login;
     private String email;
     private String ssn;
+    private String phone;
+    private int examFee;
+    private User user;
 
     public PhysicianPojo() {
     }
 
-    public PhysicianPojo(String firstName, String lastName, String login, String email, String ssn) {
+    public PhysicianPojo(String firstName, String lastName, String login, String email, String ssn, String phone, int examFee, User user) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.login = login;
         this.email = email;
         this.ssn = ssn;
+        this.phone = phone;
+        this.examFee = examFee;
+        this.user = user;
     }
 
     public String getFirstName() {
@@ -59,5 +65,29 @@ public class PhysicianPojo {
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public int getExamFee() {
+        return examFee;
+    }
+
+    public void setExamFee(int examFee) {
+        this.examFee = examFee;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }
